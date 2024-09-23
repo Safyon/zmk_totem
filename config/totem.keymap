@@ -30,7 +30,7 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COLON>;
 
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         tab_esc: tab_esc {
@@ -39,7 +39,7 @@
             bindings = <&kp TAB>, <&kp ESCAPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         space_backspace: space_backspace {
@@ -48,7 +48,16 @@
             bindings = <&kp SPACE>, <&kp BACKSPACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        comma_semicolon: comma_semicolon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SEMICOLON";
+            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
 
@@ -57,19 +66,28 @@
 
         Letters {
             bindings = <
-          &kp J      &kp U      &kp O      &kp F           &kp X            &kp P   &kp C             &kp L    &kp M  &kp V
-          &kp I      &kp E      &kp A      &kp N           &period_colon    &kp Y   &kp D             &kp R    &kp T  &kp S
-&tab_esc  &kp COMMA  &kp MINUS  &kp SQT    &kp H           &kp B            &kp W   &kp G             &kp Q    &kp K  &kp Z  &kp LGUI
-                                &kp LCTRL  &kp LEFT_SHIFT  &mo 1            &trans  &space_backspace  &kp RET
+          &kp J             &kp U      &kp O      &kp F           &kp X            &kp P   &kp C             &kp L    &kp M  &kp V
+          &kp I             &kp E      &kp A      &kp N           &period_colon    &kp Y   &kp D             &kp R    &kp T  &kp S
+&tab_esc  &comma_semicolon  &kp MINUS  &kp SQT    &kp H           &kp B            &kp W   &kp G             &kp Q    &kp K  &kp Z  &kp LGUI
+                                       &kp LCTRL  &kp LEFT_SHIFT  &mo 1            &trans  &space_backspace  &kp RET
             >;
         };
 
         Commands_Numbers {
             bindings = <
-        &kp LC(N)  &kp LC(R)  &kp LA(LEFT)   &kp LA(RIGHT)  &kp LC(F1)       &kp MINUS   &kp N1        &kp N2       &kp N3  &kp DOT
+        &kp LC(N)  &kp LC(R)  &kp LA(LEFT)   &kp LA(RIGHT)  &kp LC(F1)       &kp MINUS   &kp N1        &kp N2       &kp N3  &kp ASTERISK
         &kp LC(T)  &kp LC(W)  &kp LC(PG_UP)  &kp LC(PG_DN)  &kp LC(LS(T))    &kp PLUS    &kp N4        &kp N5       &kp N6  &kp DOT
-&trans  &kp LC(A)  &kp LC(C)  &kp LC(X)      &kp LC(V)      &kp LC(Z)        &kp EQUAL   &kp N7        &kp N8       &kp N9  &kp FSLH  &trans
+&trans  &kp LC(A)  &kp LC(C)  &kp LC(X)      &kp LC(V)      &kp LC(Z)        &kp EQUAL   &kp N7        &kp N8       &kp N9  &kp FSLH      &trans
                               &trans         &kp BACKSPACE  &trans           &kp DOLLAR  &kp NUMBER_0  &kp PERCENT
+            >;
+        };
+
+        Symbols_Directions {
+            bindings = <
+        &kp LBKT              &kp RBKT               &kp BSLH       &kp FSLH          &kp LS(PIPE)    &kp C_VOLUME_UP    &kp HOME          &kp UP     &kp END            &trans
+        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp QUESTION   &kp EXCLAMATION   &kp POUND       &kp C_VOLUME_DOWN  &kp LEFT          &kp DOWN   &kp RIGHT          &trans
+&trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LESS_THAN  &kp GREATER_THAN  &kp DOT         &kp C_MUTE         &kp LC(LG(LEFT))  &kp ENTER  &kp LC(LG(RIGHT))  &trans  &trans
+                                                     &trans         &trans            &trans          &trans             &trans            &trans
             >;
         };
     };
