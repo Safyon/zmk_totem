@@ -103,7 +103,7 @@
         Meta-Strategy {
             bindings = <
          &kp Y  &kp U  &kp I      &kp O       &kp P            &trans  &trans  &trans  &trans  &trans
-         &kp H  &kp J  &kp K      &kp L       &kp SEMICOLON    &trans  &trans  &trans  &trans  &trans
+         &kp H  &kp J  &kp K      &kp L       &kp SEMICOLON    &kp A   &trans  &trans  &trans  &trans
 &kp ESC  &kp N  &kp M  &kp COMMA  &kp PERIOD  &kp SLASH        &trans  &trans  &trans  &trans  &trans  &trans
                        &trans     &trans      &trans           &trans  &trans  &trans
             >;
