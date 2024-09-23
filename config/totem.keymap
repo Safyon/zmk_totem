@@ -59,6 +59,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        L2_backword: L2_backword {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L2_BACKWORD";
+            bindings = <&mo 2>, <&kp LC(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -66,10 +75,10 @@
 
         Letters {
             bindings = <
-          &kp J             &kp U      &kp O      &kp F           &kp X            &kp P  &kp C             &kp L    &kp M  &kp V
-          &kp I             &kp E      &kp A      &kp N           &period_colon    &kp Y  &kp D             &kp R    &kp T  &kp S
-&tab_esc  &comma_semicolon  &kp MINUS  &kp SQT    &kp H           &kp B            &kp W  &kp G             &kp Q    &kp K  &kp Z  &kp LGUI
-                                       &kp LCTRL  &kp LEFT_SHIFT  &mo 1            &mo 2  &space_backspace  &kp RET
+          &kp J             &kp U      &kp O      &kp F           &kp X            &kp P         &kp C             &kp L    &kp M  &kp V
+          &kp I             &kp E      &kp A      &kp N           &period_colon    &kp Y         &kp D             &kp R    &kp T  &kp S
+&tab_esc  &comma_semicolon  &kp MINUS  &kp SQT    &kp H           &kp B            &kp W         &kp G             &kp Q    &kp K  &kp Z  &kp LGUI
+                                       &kp LCTRL  &kp LEFT_SHIFT  &mo 1            &L2_backword  &space_backspace  &kp RET
             >;
         };
 
