@@ -60,7 +60,7 @@
          &kp J      &kp U      &kp O      &kp F           &kp X      &kp P   &kp C      &kp L    &kp M  &kp V
          &kp I      &kp E      &kp A      &kp N           &kp DOT    &kp Y   &kp D      &kp R    &kp T  &kp S
 &kp TAB  &kp COMMA  &kp MINUS  &kp SQT    &kp H           &kp B      &kp W   &kp G      &kp Q    &kp K  &kp Z  &kp LGUI
-                               &kp LCTRL  &kp LEFT_SHIFT  &trans     &trans  &kp SPACE  &kp RET
+                               &kp LCTRL  &kp LEFT_SHIFT  &mo 1      &trans  &kp SPACE  &kp RET
             >;
         };
 
