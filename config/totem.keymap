@@ -27,9 +27,8 @@
         period_colon: period_colon {
             compatible = "zmk,behavior-mod-morph";
             label = "PERIOD_COLON";
-            bindings = <&kp PERIOD>, <&kp COLON>;
-
             #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp COLON>;
             mods = <(MOD_LSFT)>;
         };
 
