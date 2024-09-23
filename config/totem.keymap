@@ -30,7 +30,7 @@
             bindings = <&kp PERIOD>, <&kp COLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         tab_esc: tab_esc {
@@ -39,7 +39,7 @@
             bindings = <&kp TAB>, <&kp ESCAPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         space_backspace: space_backspace {
@@ -48,7 +48,7 @@
             bindings = <&kp SPACE>, <&kp BACKSPACE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
